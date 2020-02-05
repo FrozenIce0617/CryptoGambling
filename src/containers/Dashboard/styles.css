@@ -1,0 +1,135 @@
+.container {
+  position: relative;
+  background-color: #292929;
+}
+
+.content {
+  padding-top: 142px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-bottom: 115px;
+  height: calc(100vh - 257px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Section Container */
+
+.section-slider-container {
+  flex: 3;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 46px;
+  padding-right: 46px;
+  background-color: #525252;
+  border-radius: 15px;
+}
+
+/* Table Container */
+
+.section-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: #525252;
+  border-radius: 15px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 54px;
+}
+
+/* Bet Container */
+
+.section-bet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 46px;
+  padding-right: 46px;
+  background-color: #525252;
+  border-radius: 15px;
+}
+
+.bet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.bet-upper {
+  position: absolute;
+  z-index: 9;
+  width: 70%;
+  margin: auto;
+}
+
+.bet-lower {
+  margin: auto;
+  position: absolute;
+  z-index: 8;
+  width: 80%;
+}
+
+/* Responsive */
+
+@media (max-width: 1192px) {
+  .content {
+    height: 100%;
+    flex-direction: column;
+    justify-content: normal;
+    padding-top: 85px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 85px;
+  }
+
+  /* Section Container */
+
+  .section-slider-container {
+    margin-bottom: 20px;
+    height: 360px;
+    flex: none;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  /* Table Container */
+
+  .section-table-container {
+    margin-bottom: 20px;
+    height: 480px;
+    flex: none;
+  }
+
+  .table-container {
+    margin: 0 20px;
+  }
+
+  /* Bet Container */
+
+  .section-bet-container {
+    height: 360px;
+    flex: none;
+  }
+
+  .bet-upper {
+    width: 30%;
+  }
+
+  .bet-lower {
+    width: 35%;
+  }
+}
