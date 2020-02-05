@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+  border: none;
+  border-spacing: 0;
+}
+
+thead {
+  height: 34px;
+  background: #275789;
+}
+
+th {
+  color: #7d9cc6;
+  padding: 9px 0px 7px 5px;
+  font-size: 12px;
+}
+
+th:first-child {
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+td {
+  background: #133252;
+  color: white;
+  font-size: 13px;
+  padding: 11.25px 5px;
+}
+
+td:first-child {
+  padding-left: 12px;
+}
+
+.react-bs-table-bordered {
+  border: none;
+}
