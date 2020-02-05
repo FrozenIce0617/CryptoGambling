@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { WebSocketLink } from 'apollo-link-ws';
+import { ApolloProvider } from 'react-apollo';
+
+import Dashboard from './containers/Dashboard';
 import './App.css';
+
+const wsLink = new WebSocketLink({
+  uri: 'ws://gambilife.com/graphql',
+  options: {
+    reconnect: true,
+  },
+});
+
+const client = new ApolloClient({
+  link: wsLink,
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <Dashboard />
+    </ApolloProvider>
   );
 }
 
