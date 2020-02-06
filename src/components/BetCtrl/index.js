@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './styles.css';
 
 const BetCtrl = props => {
-  const { value, onChange } = props;
+  const [betMount, setBetMount] = useState(0.04885313);
 
   const handleChange = e => {
-    onChange(e.target.value);
+    setBetMount(e.target.value);
   };
 
   return (
@@ -22,7 +22,7 @@ const BetCtrl = props => {
           <input
             className="bet-ctrl-input-ctrl"
             type="text"
-            value={value}
+            value={betMount}
             onChange={handleChange}
             maxLength={10}
           />
