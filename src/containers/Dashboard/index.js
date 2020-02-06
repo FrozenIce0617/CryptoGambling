@@ -7,19 +7,11 @@ import BetCtrl from '../../components/BetCtrl';
 import './styles.css';
 
 const Dashboard = () => {
-  const [sliderVal, setSliderVal] = React.useState(69);
-  const [betMount, setBetMount] = React.useState(0.04885313);
-
   const renderRangeSliderContainer = () => {
     return (
       <div className="section-slider-container">
-        <VerticalSlider
-          min={0}
-          max={100}
-          value={sliderVal}
-          onSliderChange={setSliderVal}
-        />
-        <BetCtrl value={betMount} onChange={setBetMount} />
+        <VerticalSlider min={0} max={100} />
+        <BetCtrl />
       </div>
     );
   };

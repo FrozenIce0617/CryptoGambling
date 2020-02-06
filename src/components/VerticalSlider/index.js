@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-rangeslider';
 
 import 'react-rangeslider/lib/index.css';
 import './styles.css';
 
 const VerticalSlider = props => {
-  const { min, max, value, onSliderChange } = props;
+  const { min, max } = props;
+  const [value, setValue] = useState(0);
 
-  const onHandleChange = value => {
-    onSliderChange(value);
+  const onHandleChange = newVal => {
+    setValue(newVal);
   };
 
   return (
